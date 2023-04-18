@@ -1,52 +1,42 @@
+import 'package:ecommerce_app_flutter/constant/size_config.dart';
+import 'package:ecommerce_app_flutter/views/widgets/product_rating.dart';
 import 'package:ecommerce_app_flutter/views/widgets/rounded_icon_btn.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DetailsAppBar extends StatelessWidget implements PreferredSize {
   final String rate;
-  const DetailsAppBar({super.key, required this.rate});
+  final double elevation;
+  const DetailsAppBar({super.key, required this.rate, required this.elevation});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.transparent,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            RoundedIconBtn(
-              icon: Icons.keyboard_arrow_left,
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            Container(
-              height: 35,
-              width: 65,
-              decoration: const BoxDecoration(
+    return Material(
+      color: const Color(0xFFF5F6F9),
+      elevation: elevation,
+      child: SafeArea(
+        child: Container(
+          color: Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          child: Row(
+            children: <Widget>[
+              RoundedIconBtn(
+                icon: Icons.keyboard_arrow_left,
+                onTap: () {
+                  Navigator.pop(context);
+                },
                 color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(30),
-                ),
+                btnSize: getProportinateScreenWidth(20),
+                iconSize: getProportinateScreenWidth(12),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    rate,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  SvgPicture.asset("assets/icons/Star Icon.svg"),
-                ],
+              const Spacer(),
+              ProductRating(
+                rate: rate,
               ),
-            ),
-          ],
+              SizedBox(
+                width: SizeConfig.screenWidth! * 0.03,
+              ),
+            ],
+          ),
         ),
       ),
     );
