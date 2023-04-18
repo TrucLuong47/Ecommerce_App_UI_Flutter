@@ -3,11 +3,17 @@ import 'package:flutter/material.dart';
 
 class RoundedIconBtn extends StatelessWidget {
   final IconData icon;
+  final Color color;
+  final double btnSize;
+  final double iconSize;
   final void Function() onTap;
   const RoundedIconBtn({
     super.key,
     required this.icon,
     required this.onTap,
+    required this.color,
+    required this.btnSize,
+    required this.iconSize,
   });
 
   @override
@@ -15,14 +21,17 @@ class RoundedIconBtn extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(30),
       onTap: onTap,
-      child: Container(
-        height: getProportinateScreenWidth(20),
-        width: getProportinateScreenWidth(20),
-        decoration: const BoxDecoration(
-          color: Colors.white,
+      child: Ink(
+        height: btnSize,
+        width: btnSize,
+        decoration: BoxDecoration(
+          color: color,
           shape: BoxShape.circle,
         ),
-        child: Icon(icon),
+        child: Icon(
+          icon,
+          size: iconSize,
+        ),
       ),
     );
   }
