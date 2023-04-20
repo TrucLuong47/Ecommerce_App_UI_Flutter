@@ -13,10 +13,16 @@ class AppColor {
   static const Color kTextColor = Color(0xFF757575);
 }
 
-final headingStyle = TextStyle(
+TextStyle headingStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: getProportinateScreenWidth(13),
   color: Colors.black,
+);
+
+TextStyle priceStyle = TextStyle(
+  fontSize: getProportinateScreenWidth(8.5),
+  fontWeight: FontWeight.w600,
+  color: AppColor.kPrimaryColor,
 );
 
 final otpInput = InputDecoration(

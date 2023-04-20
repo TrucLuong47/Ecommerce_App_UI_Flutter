@@ -1,8 +1,7 @@
 import 'package:ecommerce_app_flutter/constant/routes.dart';
 import 'package:ecommerce_app_flutter/constant/theme.dart';
 import 'package:ecommerce_app_flutter/models/favorite_provider.dart';
-import 'package:ecommerce_app_flutter/screen1.dart';
-import 'package:ecommerce_app_flutter/views/screens/HomeScreen/home_screen.dart';
+import 'package:ecommerce_app_flutter/views/screens/NavScreen/bottom_nav_bar.dart';
 import 'package:ecommerce_app_flutter/views/screens/OnBoardingScreen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -27,9 +26,8 @@ class MyApp extends StatelessWidget {
         title: 'Ecom',
         theme: theme(),
         debugShowCheckedModeBanner: false,
-        initialRoute: HomeScreen.routeName,
+        initialRoute: BottomNavBar.routeName,
         routes: route,
-        // home: const Screen1(),
       ),
     );
   }
