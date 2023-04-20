@@ -61,6 +61,9 @@ class _HomeBodyState extends State<HomeBody> {
                 height: SizeConfig.screenHeight! * 0.015,
               ),
               const ProductCard(),
+              SizedBox(
+                height: SizeConfig.screenHeight! * 0.2,
+              ),
             ],
           ),
         ),

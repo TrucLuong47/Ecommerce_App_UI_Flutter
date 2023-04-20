@@ -13,6 +13,7 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final favoriteProvider = Provider.of<FavoriteProvider>(context);
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.all(
@@ -39,6 +40,21 @@ class ProductCard extends StatelessWidget {
                     ),
                   );
                 },
+                child: favoriteProvider.isExist(index)
+                    ? LikeButton(
+                        onTap: () {
+                          favoriteProvider.toggleFavorite(index);
+                        },
+                        bgColor: Colors.redAccent.withOpacity(0.1),
+                        iconColor: Colors.redAccent,
+                      )
+                    : LikeButton(
+                        onTap: () {
+                          favoriteProvider.toggleFavorite(index);
+                        },
+                        bgColor: AppColor.kSecondaryColor.withOpacity(0.1),
+                        iconColor: Colors.black.withOpacity(0.3),
+                      ),
               ),
             ),
           ],
@@ -51,10 +67,13 @@ class ProductCard extends StatelessWidget {
 class SingleProductCard extends StatelessWidget {
   final Product product;
   final void Function() onTap;
+  final Widget child;
+
   const SingleProductCard({
     super.key,
     required this.product,
     required this.onTap,
+    required this.child,
   });
 
   @override
@@ -110,22 +129,7 @@ class SingleProductCard extends StatelessWidget {
                     '\$${product.price}',
                     style: priceStyle,
                   ),
-                  // isFavorite
-                  //     ? LikeButton(
-                  //         onTap: () {
-                  //           toggleFavorite;
-                  //         },
-                  //         bgColor: const Color.fromARGB(255, 255, 111, 111)
-                  //             .withOpacity(0.1),
-                  //         iconColor: Colors.pink.withOpacity(1.0),
-                  //       )
-                  //     : LikeButton(
-                  //         onTap: () {
-                  //           toggleFavorite;
-                  //         },
-                  //         bgColor: AppColor.kSecondaryColor.withOpacity(0.1),
-                  //         iconColor: Colors.black.withOpacity(0.3),
-                  //       ),
+                  child,
                 ],
               ),
             ],
