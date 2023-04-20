@@ -16,7 +16,7 @@ class DetailsAppBar extends StatelessWidget implements PreferredSize {
       child: SafeArea(
         child: Container(
           color: Colors.transparent,
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
           child: Row(
             children: <Widget>[
               RoundedIconBtn(
@@ -31,9 +31,6 @@ class DetailsAppBar extends StatelessWidget implements PreferredSize {
               const Spacer(),
               ProductRating(
                 rate: rate,
-              ),
-              SizedBox(
-                width: SizeConfig.screenWidth! * 0.03,
               ),
             ],
           ),
