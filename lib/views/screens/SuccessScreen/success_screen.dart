@@ -1,5 +1,5 @@
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
-import 'package:ecommerce_app_flutter/views/screens/HomeScreen/home_screen.dart';
+import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/home_screen.dart';
 import 'package:ecommerce_app_flutter/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
