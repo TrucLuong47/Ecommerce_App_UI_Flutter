@@ -35,81 +35,72 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          ScrollConfiguration(
-            behavior: const ScrollBehavior().copyWith(overscroll: false),
-            child: PageView(
-              controller: pageController,
-              children: screensList,
-              onPageChanged: (value) {
-                setState(() {
-                  selectedIndex = value;
-                });
-              },
+      body: ScrollConfiguration(
+        behavior: const ScrollBehavior().copyWith(overscroll: false),
+        child: PageView(
+          controller: pageController,
+          children: screensList,
+          onPageChanged: (value) {
+            setState(() {
+              selectedIndex = value;
+            });
+          },
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        currentIndex: selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              "assets/icons/Shop Icon.svg",
+              color: selectedIndex == 0
+                  ? AppColor.kPrimaryColor
+                  : AppColor.kSecondaryColor.withOpacity(0.4),
             ),
+            label: 'Home',
           ),
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: BottomNavigationBar(
-              backgroundColor: Colors.white,
-              currentIndex: selectedIndex,
-              type: BottomNavigationBarType.fixed,
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              items: [
-                BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    "assets/icons/Shop Icon.svg",
-                    color: selectedIndex == 0
-                        ? AppColor.kPrimaryColor
-                        : AppColor.kSecondaryColor.withOpacity(0.4),
-                  ),
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    "assets/icons/Heart Icon.svg",
-                    color: selectedIndex == 1
-                        ? AppColor.kPrimaryColor
-                        : AppColor.kSecondaryColor.withOpacity(0.4),
-                  ),
-                  label: 'Favorite',
-                ),
-                BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    "assets/icons/Chat bubble Icon.svg",
-                    color: selectedIndex == 2
-                        ? AppColor.kPrimaryColor
-                        : AppColor.kSecondaryColor.withOpacity(0.4),
-                  ),
-                  label: 'Message',
-                ),
-                BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    "assets/icons/User Icon.svg",
-                    color: selectedIndex == 3
-                        ? AppColor.kPrimaryColor
-                        : AppColor.kSecondaryColor.withOpacity(0.4),
-                  ),
-                  label: 'Profile',
-                ),
-              ],
-              onTap: (value) {
-                setState(() {
-                  selectedIndex = value;
-                  pageController.animateToPage(
-                    value,
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.easeInOut,
-                  );
-                });
-              },
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              "assets/icons/Heart Icon.svg",
+              color: selectedIndex == 1
+                  ? AppColor.kPrimaryColor
+                  : AppColor.kSecondaryColor.withOpacity(0.4),
             ),
+            label: 'Favorite',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              "assets/icons/Chat bubble Icon.svg",
+              color: selectedIndex == 2
+                  ? AppColor.kPrimaryColor
+                  : AppColor.kSecondaryColor.withOpacity(0.4),
+            ),
+            label: 'Message',
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              "assets/icons/User Icon.svg",
+              color: selectedIndex == 3
+                  ? AppColor.kPrimaryColor
+                  : AppColor.kSecondaryColor.withOpacity(0.4),
+            ),
+            label: 'Profile',
           ),
         ],
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+            pageController.animateToPage(
+              value,
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.easeInOut,
+            );
+          });
+        },
       ),
     );
   }
