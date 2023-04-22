@@ -5,16 +5,18 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final void Function() press;
+  final double borderRadius;
   const CustomButton({
     Key? key,
     required this.text,
     required this.press,
+    required this.borderRadius,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: BorderRadius.circular(borderRadius),
       child: TextButton(
         onPressed: press,
         style: TextButton.styleFrom(
