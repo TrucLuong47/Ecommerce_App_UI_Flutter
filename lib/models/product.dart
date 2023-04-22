@@ -24,7 +24,7 @@ class Product {
 
 List<Product> demoProducts = [
   Product(
-    id: 1,
+    id: 0,
     images: [
       "assets/images/ps4_console_white_1.png",
       "assets/images/ps4_console_white_2.png",
@@ -44,7 +44,7 @@ List<Product> demoProducts = [
     isPopular: true,
   ),
   Product(
-    id: 2,
+    id: 1,
     images: [
       "assets/images/Image Popular Product 2.png",
       "assets/images/Image Popular Product 2.png",
@@ -64,7 +64,7 @@ List<Product> demoProducts = [
     isPopular: true,
   ),
   Product(
-    id: 3,
+    id: 2,
     images: [
       "assets/images/glap.png",
       "assets/images/glap.png",
@@ -84,7 +84,7 @@ List<Product> demoProducts = [
     isPopular: true,
   ),
   Product(
-    id: 4,
+    id: 3,
     images: [
       "assets/images/wireless headset.png",
       "assets/images/wireless headset.png",
