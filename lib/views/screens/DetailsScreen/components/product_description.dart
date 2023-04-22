@@ -40,15 +40,7 @@ class _ProductDescriptionState extends State<ProductDescription> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '\$${widget.product.price}',
-                  style: priceStyle.copyWith(
-                    fontSize: getProportinateScreenWidth(7),
-                    color: AppColor.kSecondaryColor,
-                    decoration: TextDecoration.lineThrough,
-                  ),
-                ),
-                Text(
-                  ' \$${(widget.product.price * 0.6).toStringAsFixed(2)}',
+                  ' \$${widget.product.price}',
                   style: priceStyle.copyWith(
                     fontSize: getProportinateScreenWidth(10),
                   ),

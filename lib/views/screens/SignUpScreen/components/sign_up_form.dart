@@ -83,6 +83,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   Navigator.pushNamed(context, CompleteProfileScreen.routeName);
                 }
               },
+              borderRadius: 30,
             ),
           ),
         ],

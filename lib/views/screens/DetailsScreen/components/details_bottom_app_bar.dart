@@ -1,20 +1,29 @@
 import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
+import 'package:ecommerce_app_flutter/models/cart_provider.dart';
+import 'package:ecommerce_app_flutter/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 class DetailsBottomAppBar extends StatelessWidget {
-  const DetailsBottomAppBar({super.key});
+  final Product product;
+  const DetailsBottomAppBar({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
+    final cartProvider = Provider.of<CartProvider>(context);
     return Ink(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border.all(
-          color: AppColor.kSecondaryColor.withOpacity(0.3),
-        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            offset: const Offset(0, -1),
+            blurRadius: 20,
+          ),
+        ],
       ),
       width: double.infinity,
       child: Row(
@@ -32,7 +41,19 @@ class DetailsBottomAppBar extends StatelessWidget {
             ),
           ),
           CustomButton(
-            onTap: () {},
+            onTap: () {
+              if (cartProvider.isExist(product)) {
+                cartProvider.sum(cartProvider.numOfItem);
+                cartProvider.cartItem[1].numOfItem += cartProvider.numOfItem;
+              } else {
+                cartProvider.cartItem.add(
+                  Cart(product: product, numOfItem: cartProvider.numOfItem),
+                );
+              }
+
+              // cartProvider.clearCartItem();
+              print(cartProvider.cartItem);
+            },
             bgColor: Colors.white,
             width: SizeConfig.screenWidth! * 0.15,
             child: Center(

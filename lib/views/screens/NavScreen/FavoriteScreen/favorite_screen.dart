@@ -8,6 +8,7 @@ import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/compone
 import 'package:flutter/material.dart';
 
 class FavoriteScreen extends StatefulWidget {
+  static String routeName = "/favorite";
   const FavoriteScreen({super.key});
 
   @override

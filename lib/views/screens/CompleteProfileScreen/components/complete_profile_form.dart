@@ -103,6 +103,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
                   );
                 }
               },
+              borderRadius: 30,
             ),
           ),
         ],

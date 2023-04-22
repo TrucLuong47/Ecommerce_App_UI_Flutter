@@ -104,6 +104,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                                 Navigator.pushNamed(
                                     context, SignInScreen.routeName);
                               },
+                              borderRadius: 30,
                             ),
                           )
                         : AnimatedContainer(
@@ -116,6 +117,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                                     duration: const Duration(milliseconds: 300),
                                     curve: Curves.easeInOut);
                               },
+                              borderRadius: 30,
                             ),
                           ),
                     SizedBox(

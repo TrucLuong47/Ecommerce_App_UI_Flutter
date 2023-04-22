@@ -122,6 +122,7 @@ class _SignInFormState extends State<SignInForm> {
                   );
                 }
               },
+              borderRadius: 30,
             ),
           ),
         ],

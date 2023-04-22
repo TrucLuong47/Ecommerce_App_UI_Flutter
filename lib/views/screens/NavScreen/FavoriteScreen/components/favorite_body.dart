@@ -71,9 +71,30 @@ class FavoriteBody extends StatelessWidget {
                           onTap: () {
                             favoriteProvider.removeFromFavorite(
                                 favoriteProvider.favoriteItem[index]);
+                            ScaffoldMessenger.of(context)
+                              ..removeCurrentSnackBar()
+                              ..showSnackBar(
+                                SnackBar(
+                                  content: Row(
+                                    children: const [
+                                      Icon(
+                                        Icons.remove_rounded,
+                                        color: Colors.red,
+                                      ),
+                                      Text(
+                                        "  Successfully removed from your favorite",
+                                        style: TextStyle(color: Colors.black),
+                                      ),
+                                    ],
+                                  ),
+                                  backgroundColor: Colors.white,
+                                  duration: const Duration(milliseconds: 1300),
+                                  behavior: SnackBarBehavior.floating,
+                                ),
+                              );
                           },
                           child: const Icon(
-                            Icons.remove_circle_outline,
+                            Icons.delete_rounded,
                             color: Colors.red,
                           ),
                         ),

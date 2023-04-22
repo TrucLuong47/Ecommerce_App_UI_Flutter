@@ -10,7 +10,7 @@ class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
     super.key,
     required this.svgPicPath,
-    required this.numOfItem,
+    this.numOfItem = 0,
     required this.onTap,
     required this.iconColor,
   });
@@ -31,7 +31,6 @@ class IconBtnWithCounter extends StatelessWidget {
             width: getProportinateScreenWidth(20),
             height: getProportinateScreenWidth(20),
             decoration: BoxDecoration(
-              // color: Color.fromARGB(255, 255, 255, 255),
               borderRadius: BorderRadius.circular(30),
             ),
             child: SvgPicture.asset(
@@ -43,22 +42,25 @@ class IconBtnWithCounter extends StatelessWidget {
         Positioned(
           top: 1,
           right: 3,
-          child: Container(
-            height: getProportinateScreenWidth(7),
-            width: getProportinateScreenWidth(7),
-            decoration: BoxDecoration(
-              color: Colors.red,
-              shape: BoxShape.circle,
-              border: Border.all(color: Colors.white),
-            ),
-            alignment: Alignment.center,
-            child: Text(
-              numOfItem.toString(),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: getProportinateScreenWidth(4),
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
+          child: Opacity(
+            opacity: numOfItem == 0 ? 0 : 1,
+            child: Container(
+              height: getProportinateScreenWidth(8),
+              width: getProportinateScreenWidth(8),
+              decoration: BoxDecoration(
+                color: Colors.red,
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white),
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                numOfItem.toString(),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: getProportinateScreenWidth(4),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),

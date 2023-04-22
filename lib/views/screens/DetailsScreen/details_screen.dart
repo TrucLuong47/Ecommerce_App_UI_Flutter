@@ -1,5 +1,3 @@
-import 'package:ecommerce_app_flutter/constant/app_color.dart';
-import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/models/product.dart';
 import 'package:ecommerce_app_flutter/views/screens/DetailsScreen/components/details_app_bar.dart';
 import 'package:ecommerce_app_flutter/views/screens/DetailsScreen/components/details_body.dart';
@@ -46,13 +44,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
         product: arg.product,
         scrollController: scrollController,
       ),
-      bottomNavigationBar: const DetailsBottomAppBar(),
+      bottomNavigationBar: DetailsBottomAppBar(
+        product: arg.product,
+      ),
     );
   }
 }
 
 class DetailsArgument {
   final Product product;
-
   DetailsArgument({required this.product});
 }

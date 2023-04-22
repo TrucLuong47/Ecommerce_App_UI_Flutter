@@ -44,6 +44,27 @@ class ProductCard extends StatelessWidget {
                     ? LikeButton(
                         onTap: () {
                           favoriteProvider.toggleFavorite(index);
+                          ScaffoldMessenger.of(context)
+                            ..removeCurrentSnackBar()
+                            ..showSnackBar(
+                              SnackBar(
+                                content: Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.remove_rounded,
+                                      color: Colors.red,
+                                    ),
+                                    Text(
+                                      "  Successfully removed from your favorite",
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                                backgroundColor: Colors.white,
+                                duration: const Duration(milliseconds: 1300),
+                                behavior: SnackBarBehavior.floating,
+                              ),
+                            );
                         },
                         bgColor: Colors.redAccent.withOpacity(0.1),
                         iconColor: Colors.redAccent,
@@ -51,6 +72,27 @@ class ProductCard extends StatelessWidget {
                     : LikeButton(
                         onTap: () {
                           favoriteProvider.toggleFavorite(index);
+                          ScaffoldMessenger.of(context)
+                            ..removeCurrentSnackBar()
+                            ..showSnackBar(
+                              SnackBar(
+                                content: Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.check_rounded,
+                                      color: Colors.green,
+                                    ),
+                                    Text(
+                                      "  Successfully added to your favorite",
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ],
+                                ),
+                                backgroundColor: Colors.white,
+                                duration: const Duration(milliseconds: 1300),
+                                behavior: SnackBarBehavior.floating,
+                              ),
+                            );
                         },
                         bgColor: AppColor.kSecondaryColor.withOpacity(0.1),
                         iconColor: Colors.black.withOpacity(0.3),

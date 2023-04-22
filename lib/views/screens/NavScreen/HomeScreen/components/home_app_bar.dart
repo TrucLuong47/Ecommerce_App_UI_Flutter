@@ -1,4 +1,5 @@
 import 'package:ecommerce_app_flutter/constant/app_color.dart';
+import 'package:ecommerce_app_flutter/views/screens/CartScreen/cart_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/components/icon_btn_with_counter.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/components/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -25,15 +26,17 @@ class HomeAppBar extends StatelessWidget implements PreferredSize {
               ),
               IconBtnWithCounter(
                 svgPicPath: "assets/icons/Shopping-cart.svg",
-                numOfItem: 1,
                 iconColor: AppColor.kPrimaryColor,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, CartScreen.routeName);
+                },
+                numOfItem: 4,
               ),
               IconBtnWithCounter(
                 svgPicPath: "assets/icons/Bell-notification.svg",
-                numOfItem: 4,
                 onTap: () {},
                 iconColor: AppColor.kPrimaryColor,
+                numOfItem: 0,
               ),
             ],
           ),

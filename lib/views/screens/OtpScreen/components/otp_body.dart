@@ -54,6 +54,7 @@ class OtpBody extends StatelessWidget {
                 child: CustomButton(
                   text: 'Continue',
                   press: () {},
+                  borderRadius: 30,
                 ),
               ),
               SizedBox(

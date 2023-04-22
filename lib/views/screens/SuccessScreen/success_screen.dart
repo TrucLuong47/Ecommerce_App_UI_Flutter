@@ -74,6 +74,7 @@ class _SuccessScreenState extends State<SuccessScreen>
                   press: () {
                     Navigator.pushNamed(context, HomeScreen.routeName);
                   },
+                  borderRadius: 30,
                 ),
               ),
             ),

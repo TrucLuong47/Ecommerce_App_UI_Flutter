@@ -91,6 +91,7 @@ class ForgotPasswordForm extends StatelessWidget {
                   );
                 }
               },
+              borderRadius: 30,
             ),
           ),
         ],
