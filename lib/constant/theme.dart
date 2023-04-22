@@ -29,7 +29,7 @@ AppBarTheme appBarTheme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-    bodyMedium: TextStyle(color: AppColor.kTextColor),
+    bodySmall: TextStyle(color: AppColor.kTextColor),
   );
 }
 
