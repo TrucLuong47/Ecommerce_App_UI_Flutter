@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_flutter/constant/routes.dart';
 import 'package:ecommerce_app_flutter/constant/theme.dart';
+import 'package:ecommerce_app_flutter/models/cart_provider.dart';
 import 'package:ecommerce_app_flutter/models/favorite_provider.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/bottom_nav_bar.dart';
 import 'package:ecommerce_app_flutter/views/screens/OnBoardingScreen/onboarding_screen.dart';
@@ -20,8 +21,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => FavoriteProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => FavoriteProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => CartProvider(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Ecom',
         theme: theme(),
