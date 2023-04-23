@@ -92,6 +92,8 @@ class ForgotPasswordForm extends StatelessWidget {
                 }
               },
               borderRadius: 30,
+              fgColor: Colors.white,
+              bgColor: AppColor.kPrimaryColor,
             ),
           ),
         ],

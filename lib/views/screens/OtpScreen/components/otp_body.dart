@@ -55,6 +55,8 @@ class OtpBody extends StatelessWidget {
                   text: 'Continue',
                   press: () {},
                   borderRadius: 30,
+                  fgColor: Colors.white,
+                  bgColor: AppColor.kPrimaryColor,
                 ),
               ),
               SizedBox(

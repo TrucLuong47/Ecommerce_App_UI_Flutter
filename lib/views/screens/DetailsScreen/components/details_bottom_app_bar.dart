@@ -2,6 +2,7 @@ import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/models/cart_provider.dart';
 import 'package:ecommerce_app_flutter/models/product.dart';
+import 'package:ecommerce_app_flutter/views/widgets/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,7 @@ class DetailsBottomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartProvider = Provider.of<CartProvider>(context);
+    final cartProvider = Provider.of<CartProvider>(context, listen: false);
     return Ink(
       padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
@@ -43,16 +44,26 @@ class DetailsBottomAppBar extends StatelessWidget {
           CustomButton(
             onTap: () {
               if (cartProvider.isExist(product)) {
-                cartProvider.sum(cartProvider.numOfItem);
-                cartProvider.cartItem[1].numOfItem += cartProvider.numOfItem;
+                cartProvider.sumNumOfItem(cartProvider.numOfItem, product);
+                cartProvider.sumPrice(product.price, cartProvider.numOfItem);
+                showSnackBar(
+                  context,
+                  "Successfully added to your cart",
+                  Icons.check_rounded,
+                  Colors.green,
+                );
               } else {
-                cartProvider.cartItem.add(
+                cartProvider.addItem(
                   Cart(product: product, numOfItem: cartProvider.numOfItem),
                 );
+                cartProvider.sumPrice(product.price, cartProvider.numOfItem);
+                showSnackBar(
+                  context,
+                  "Successfully added to your cart",
+                  Icons.check_rounded,
+                  Colors.green,
+                );
               }
-
-              // cartProvider.clearCartItem();
-              print(cartProvider.cartItem);
             },
             bgColor: Colors.white,
             width: SizeConfig.screenWidth! * 0.15,

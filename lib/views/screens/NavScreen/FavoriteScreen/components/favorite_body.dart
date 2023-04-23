@@ -4,6 +4,7 @@ import 'package:ecommerce_app_flutter/models/favorite_provider.dart';
 import 'package:ecommerce_app_flutter/models/product.dart';
 import 'package:ecommerce_app_flutter/views/screens/DetailsScreen/details_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/components/product_card.dart';
+import 'package:ecommerce_app_flutter/views/widgets/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -71,27 +72,12 @@ class FavoriteBody extends StatelessWidget {
                           onTap: () {
                             favoriteProvider.removeFromFavorite(
                                 favoriteProvider.favoriteItem[index]);
-                            ScaffoldMessenger.of(context)
-                              ..removeCurrentSnackBar()
-                              ..showSnackBar(
-                                SnackBar(
-                                  content: Row(
-                                    children: const [
-                                      Icon(
-                                        Icons.remove_rounded,
-                                        color: Colors.red,
-                                      ),
-                                      Text(
-                                        "  Successfully removed from your favorite",
-                                        style: TextStyle(color: Colors.black),
-                                      ),
-                                    ],
-                                  ),
-                                  backgroundColor: Colors.white,
-                                  duration: const Duration(milliseconds: 1300),
-                                  behavior: SnackBarBehavior.floating,
-                                ),
-                              );
+                            showSnackBar(
+                              context,
+                              "Successfully removed from your favorite",
+                              Icons.remove_rounded,
+                              Colors.red,
+                            );
                           },
                           child: const Icon(
                             Icons.delete_rounded,

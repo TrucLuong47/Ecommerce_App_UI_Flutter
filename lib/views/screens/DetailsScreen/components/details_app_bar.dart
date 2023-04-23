@@ -37,16 +37,18 @@ class DetailsAppBar extends StatelessWidget implements PreferredSize {
               ProductRating(
                 rate: rate,
               ),
-              Consumer<CartProvider>(builder: (context, cartProvider, child) {
-                return IconBtnWithCounter(
-                  svgPicPath: "assets/icons/Shopping-cart.svg",
-                  iconColor: AppColor.kPrimaryColor,
-                  onTap: () {
-                    Navigator.pushNamed(context, CartScreen.routeName);
-                  },
-                  numOfItem: cartProvider.numOfItem,
-                );
-              }),
+              Consumer<CartProvider>(
+                builder: (context, cartProvider, child) {
+                  return IconBtnWithCounter(
+                    svgPicPath: "assets/icons/Shopping-cart.svg",
+                    iconColor: AppColor.kPrimaryColor,
+                    onTap: () {
+                      Navigator.pushNamed(context, CartScreen.routeName);
+                    },
+                    numOfItem: cartProvider.cartItem.length,
+                  );
+                },
+              ),
             ],
           ),
         ),

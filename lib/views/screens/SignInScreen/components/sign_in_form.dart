@@ -123,6 +123,8 @@ class _SignInFormState extends State<SignInForm> {
                 }
               },
               borderRadius: 30,
+              fgColor: Colors.white,
+              bgColor: AppColor.kPrimaryColor,
             ),
           ),
         ],

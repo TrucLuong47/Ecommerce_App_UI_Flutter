@@ -3,6 +3,7 @@ import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/models/favorite_provider.dart';
 import 'package:ecommerce_app_flutter/models/product.dart';
 import 'package:ecommerce_app_flutter/views/screens/DetailsScreen/details_screen.dart';
+import 'package:ecommerce_app_flutter/views/widgets/custom_snack_bar.dart';
 import 'package:ecommerce_app_flutter/views/widgets/like_button.dart';
 import 'package:ecommerce_app_flutter/views/widgets/product_rating.dart';
 import 'package:flutter/material.dart';
@@ -44,27 +45,12 @@ class ProductCard extends StatelessWidget {
                     ? LikeButton(
                         onTap: () {
                           favoriteProvider.toggleFavorite(index);
-                          ScaffoldMessenger.of(context)
-                            ..removeCurrentSnackBar()
-                            ..showSnackBar(
-                              SnackBar(
-                                content: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.remove_rounded,
-                                      color: Colors.red,
-                                    ),
-                                    Text(
-                                      "  Successfully removed from your favorite",
-                                      style: TextStyle(color: Colors.black),
-                                    ),
-                                  ],
-                                ),
-                                backgroundColor: Colors.white,
-                                duration: const Duration(milliseconds: 1300),
-                                behavior: SnackBarBehavior.floating,
-                              ),
-                            );
+                          showSnackBar(
+                            context,
+                            "Successfully removed from your favorite",
+                            Icons.remove_rounded,
+                            Colors.red,
+                          );
                         },
                         bgColor: Colors.redAccent.withOpacity(0.1),
                         iconColor: Colors.redAccent,
@@ -72,27 +58,12 @@ class ProductCard extends StatelessWidget {
                     : LikeButton(
                         onTap: () {
                           favoriteProvider.toggleFavorite(index);
-                          ScaffoldMessenger.of(context)
-                            ..removeCurrentSnackBar()
-                            ..showSnackBar(
-                              SnackBar(
-                                content: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.check_rounded,
-                                      color: Colors.green,
-                                    ),
-                                    Text(
-                                      "  Successfully added to your favorite",
-                                      style: TextStyle(color: Colors.black),
-                                    ),
-                                  ],
-                                ),
-                                backgroundColor: Colors.white,
-                                duration: const Duration(milliseconds: 1300),
-                                behavior: SnackBarBehavior.floating,
-                              ),
-                            );
+                          showSnackBar(
+                            context,
+                            "Successfully added to your favorite",
+                            Icons.check_rounded,
+                            Colors.green,
+                          );
                         },
                         bgColor: AppColor.kSecondaryColor.withOpacity(0.1),
                         iconColor: Colors.black.withOpacity(0.3),

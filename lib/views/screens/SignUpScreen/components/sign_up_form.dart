@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/constant/validation.dart';
 import 'package:ecommerce_app_flutter/views/screens/CompleteProfileScreen/complete_profile_screen.dart';
@@ -84,6 +85,8 @@ class _SignUpFormState extends State<SignUpForm> {
                 }
               },
               borderRadius: 30,
+              fgColor: Colors.white,
+              bgColor: AppColor.kPrimaryColor,
             ),
           ),
         ],

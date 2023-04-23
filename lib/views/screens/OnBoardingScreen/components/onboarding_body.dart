@@ -105,6 +105,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                                     context, SignInScreen.routeName);
                               },
                               borderRadius: 30,
+                              fgColor: Colors.white,
+                              bgColor: AppColor.kPrimaryColor,
                             ),
                           )
                         : AnimatedContainer(
@@ -118,6 +120,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                                     curve: Curves.easeInOut);
                               },
                               borderRadius: 30,
+                              fgColor: Colors.white,
+                              bgColor: AppColor.kPrimaryColor,
                             ),
                           ),
                     SizedBox(
