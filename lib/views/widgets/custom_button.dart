@@ -6,11 +6,16 @@ class CustomButton extends StatelessWidget {
   final String text;
   final void Function() press;
   final double borderRadius;
+  final Color fgColor;
+  final Color bgColor;
+
   const CustomButton({
     Key? key,
     required this.text,
     required this.press,
     required this.borderRadius,
+    required this.fgColor,
+    required this.bgColor,
   }) : super(key: key);
 
   @override
@@ -20,8 +25,8 @@ class CustomButton extends StatelessWidget {
       child: TextButton(
         onPressed: press,
         style: TextButton.styleFrom(
-          foregroundColor: Colors.white,
-          backgroundColor: AppColor.kPrimaryColor,
+          foregroundColor: fgColor,
+          backgroundColor: bgColor,
           padding: const EdgeInsets.symmetric(vertical: 15),
         ),
         child: Text(
