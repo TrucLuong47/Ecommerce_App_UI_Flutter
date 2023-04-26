@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         title: 'Ecom',
         theme: theme(),
         debugShowCheckedModeBanner: false,
-        initialRoute: BottomNavBar.routeName,
+        initialRoute: OnBoardingScreen.routeName,
         routes: route,
       ),
     );
