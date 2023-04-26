@@ -1,9 +1,11 @@
 import 'package:ecommerce_app_flutter/views/screens/CartScreen/cart_screen.dart';
+import 'package:ecommerce_app_flutter/views/screens/ChatScreen/chat_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/CompleteProfileScreen/complete_profile_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/DetailsScreen/details_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/ForgotPasswordScreen/forgot_password_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/FavoriteScreen/favorite_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/home_screen.dart';
+import 'package:ecommerce_app_flutter/views/screens/NavScreen/MessageScreen/message_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/bottom_nav_bar.dart';
 import 'package:ecommerce_app_flutter/views/screens/OtpScreen/otp_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/SignInScreen/sign_in_screen.dart';
@@ -25,4 +27,6 @@ final Map<String, WidgetBuilder> route = {
   DetailsScreen.routeName: (context) => const DetailsScreen(),
   CartScreen.routeName: (context) => const CartScreen(),
   FavoriteScreen.routeName: (context) => const FavoriteScreen(),
+  MessageScreen.routeName: (context) => const MessageScreen(),
+  ChatScreen.routeName: (context) => const ChatScreen(),
 };
