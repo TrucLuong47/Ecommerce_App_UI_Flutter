@@ -9,7 +9,7 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
   * regexed_validator: [Link](https://pub.dev/packages/regexed_validator)
   * animations: [Link](https://pub.dev/packages/animations)
 
-## Some Function I have build:
+## Some Functions I have build:
   * Handle input error of Login and Sign Up textfield.
   * Add product to Favorite.
   * Add product to Cart.
