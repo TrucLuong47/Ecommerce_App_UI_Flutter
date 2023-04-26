@@ -8,6 +8,12 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
   * smooth_page_indicator: [Link](https://pub.dev/packages/smooth_page_indicator)
   * regexed_validator: [Link](https://pub.dev/packages/regexed_validator)
   * animations: [Link](https://pub.dev/packages/animations)
+  * 
+## Some Function I have build:
+  * Handle input error of Login and Sign Up textfield.
+  * Add product to Favorite.
+  * Add product to Cart.
+  * Local chat by adding text to list of Message.
 
 ## Screen it contains:
  ### Onboarding Screen
