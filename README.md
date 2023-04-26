@@ -29,7 +29,7 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
  ![Home](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Home.png)
  
  ### Product Details Screen
- ![Product Details](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Home.png)
+ ![Product Details](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/ProductDetails.png)
  
  ### Cart Screen
  ![Cart](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Cart.png)
