@@ -2,7 +2,7 @@ import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/models/cart_provider.dart';
 import 'package:ecommerce_app_flutter/views/screens/CartScreen/cart_screen.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/components/icon_btn_with_counter.dart';
-import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/components/search_bar.dart';
+import 'package:ecommerce_app_flutter/views/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +25,8 @@ class HomeAppBar extends StatelessWidget implements PreferredSize {
             children: <Widget>[
               SearchBar(
                 boxColor: AppColor.kSecondaryColor.withOpacity(0.1),
+                searchBarWidth: 0.65,
+                hintText: 'Search Product',
               ),
               Consumer<CartProvider>(
                 builder: (context, cartProvider, child) {
