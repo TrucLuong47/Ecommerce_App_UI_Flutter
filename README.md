@@ -8,7 +8,39 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
   * smooth_page_indicator: [Link](https://pub.dev/packages/smooth_page_indicator)
   * regexed_validator: [Link](https://pub.dev/packages/regexed_validator)
   * animations: [Link](https://pub.dev/packages/animations)
+  * 
+## Some Function I have build:
+  * Handle input error of Login and Sign Up textfield.
+  * Add product to Favorite.
+  * Add product to Cart.
+  * Local chat by adding text to list of Message.
 
 ## Screen it contains:
- ### Onboarding
+ ### Onboarding Screen
+ ![Onboarding](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Onboarding.png)
+ 
+ ### Login Screen
+ ![Login](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/SignIn.png)
+ 
+ ### Sign Up Screen
+ ![Sign Up](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/SignUp.png)
+ 
+ ### Home Screen
+ ![Home](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Home.png)
+ 
+ ### Product Details Screen
+ ![Product Details](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Home.png)
+ 
+ ### Cart Screen
+ ![Cart](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Cart.png)
+ 
+ ### Payment Successful Screen
+ ![Payment Successful](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/PaymentSuccessful.png)
+ 
+ ### Favorite Screen
+ ![Favorite](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Favorite.png)
+ 
+ ### Message Screen
+ ![Message](https://github.com/TrucLuong47/Ecommerce_App_UI_Flutter/blob/main/preview/Message.png)
+ 
 
