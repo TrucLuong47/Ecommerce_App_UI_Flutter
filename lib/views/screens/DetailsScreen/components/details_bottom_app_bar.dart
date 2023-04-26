@@ -2,6 +2,7 @@ import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/models/cart_provider.dart';
 import 'package:ecommerce_app_flutter/models/product.dart';
+import 'package:ecommerce_app_flutter/views/screens/SuccessScreen/success_screen.dart';
 import 'package:ecommerce_app_flutter/views/widgets/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -75,7 +76,12 @@ class DetailsBottomAppBar extends StatelessWidget {
             ),
           ),
           CustomButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, SuccessScreen.routeName,
+                  arguments: SuccessArgument(
+                    text: 'Payment Successful',
+                  ));
+            },
             bgColor: AppColor.kPrimaryColor,
             width: SizeConfig.screenWidth! * 0.55,
             child: Center(
