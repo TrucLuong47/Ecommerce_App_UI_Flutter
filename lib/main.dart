@@ -6,6 +6,7 @@ import 'package:ecommerce_app_flutter/views/screens/NavScreen/bottom_nav_bar.dar
 import 'package:ecommerce_app_flutter/views/screens/OnBoardingScreen/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           create: (context) => CartProvider(),
         ),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'Ecom',
         theme: theme(),
         debugShowCheckedModeBanner: false,
