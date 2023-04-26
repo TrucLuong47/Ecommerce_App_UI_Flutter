@@ -1,6 +1,7 @@
 import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/views/screens/NavScreen/HomeScreen/home_screen.dart';
+import 'package:ecommerce_app_flutter/views/screens/NavScreen/bottom_nav_bar.dart';
 import 'package:ecommerce_app_flutter/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,7 @@ class _SuccessScreenState extends State<SuccessScreen>
                 child: CustomButton(
                   text: 'Back to home',
                   press: () {
-                    Navigator.pushNamed(context, HomeScreen.routeName);
+                    Navigator.pushNamed(context, BottomNavBar.routeName);
                   },
                   borderRadius: 30,
                   fgColor: Colors.white,
