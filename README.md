@@ -10,9 +10,9 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
   * animations: [Link](https://pub.dev/packages/animations)
 
 ## Some Functions I have built:
-  * Handle input error of Login and Sign Up textfield.
-  * Add product to Favorite.
-  * Add product to Cart.
+  * Handling input error of Login and Sign Up textfield.
+  * Adding product to Favorite.
+  * Adding product to Cart and calculating total product cost.
   * Local chat by adding text to list of Message.
 
 ## Screen it contains:
