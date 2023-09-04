@@ -69,6 +69,8 @@ class _SignUpFormState extends State<SignUpForm> {
                 return emptyRePwd;
               } else if (value != pwdController.text) {
                 return misMatched;
+              } else {
+                return "";
               }
             },
           ),

@@ -2,21 +2,21 @@ import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:flutter/material.dart';
 
-class SearchBar extends StatefulWidget {
+class SearchBarr extends StatefulWidget {
   final Color boxColor;
   final double searchBarWidth;
   final String hintText;
-  const SearchBar(
+  const SearchBarr(
       {super.key,
       required this.boxColor,
       required this.searchBarWidth,
       required this.hintText});
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<SearchBarr> createState() => _SearchBarrState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _SearchBarrState extends State<SearchBarr> {
   final FocusNode searchFocusNode = FocusNode();
   static Color searchIcon = AppColor.kTextColor;
   @override

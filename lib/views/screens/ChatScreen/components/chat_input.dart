@@ -91,11 +91,10 @@ class _ChatInputState extends State<ChatInput> {
                 );
                 List<Message> cloneMessages = List.from(widget.chat.messages)
                   ..insert(0, newMessage);
-                print(cloneMessages);
                 setState(() {
+                  // ignore: unused_local_variable
                   Chat chat = widget.chat.copyWith(messages: cloneMessages);
                 });
-                print(widget.chat.messages);
               },
               child: const Icon(
                 Icons.send_rounded,

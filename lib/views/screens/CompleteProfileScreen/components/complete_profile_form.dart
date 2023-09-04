@@ -1,6 +1,5 @@
 import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/constant/validation.dart';
-import 'package:ecommerce_app_flutter/views/screens/OtpScreen/components/otp_body.dart';
 import 'package:ecommerce_app_flutter/views/screens/OtpScreen/otp_screen.dart';
 import 'package:ecommerce_app_flutter/views/widgets/custom_button.dart';
 import 'package:ecommerce_app_flutter/views/widgets/custom_text_field.dart';

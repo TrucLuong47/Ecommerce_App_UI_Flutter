@@ -23,7 +23,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSize {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              SearchBar(
+              SearchBarr(
                 boxColor: AppColor.kSecondaryColor.withOpacity(0.1),
                 searchBarWidth: 0.65,
                 hintText: 'Search Product',

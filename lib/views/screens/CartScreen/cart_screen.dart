@@ -1,4 +1,3 @@
-import 'package:ecommerce_app_flutter/constant/app_color.dart';
 import 'package:ecommerce_app_flutter/views/screens/CartScreen/components/cart_app_bar.dart';
 import 'package:ecommerce_app_flutter/views/screens/CartScreen/components/cart_body.dart';
 import 'package:ecommerce_app_flutter/views/screens/CartScreen/components/cart_bottom_nav_bar.dart';

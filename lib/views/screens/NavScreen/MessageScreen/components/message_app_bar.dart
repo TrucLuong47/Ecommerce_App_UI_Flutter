@@ -10,7 +10,7 @@ class MessageAppBar extends StatelessWidget implements PreferredSize {
     return SafeArea(
       child: Container(
         padding: const EdgeInsets.all(10),
-        child: SearchBar(
+        child: SearchBarr(
           boxColor: AppColor.kSecondaryColor.withOpacity(0.1),
           searchBarWidth: 0.9,
           hintText: 'Search User',

@@ -3,7 +3,6 @@ import 'package:ecommerce_app_flutter/constant/size_config.dart';
 import 'package:ecommerce_app_flutter/views/screens/SignUpScreen/components/move_to_sign_in.dart';
 import 'package:ecommerce_app_flutter/views/screens/SignUpScreen/components/sign_up_form.dart';
 import 'package:ecommerce_app_flutter/views/widgets/social_connect.dart';
-import 'package:ecommerce_app_flutter/views/screens/SignInScreen/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpBody extends StatelessWidget {
