@@ -4,7 +4,6 @@ This is a UI template for an E-Commerce app, built with Flutter. It includes sev
 ## Packages I have used:
   * flutter_svg: [Link](https://pub.dev/packages/flutter_svg)
   * provider: [Link](https://pub.dev/packages/provider)
-  * getX: [Link](https://pub.dev/packages/get)
   * smooth_page_indicator: [Link](https://pub.dev/packages/smooth_page_indicator)
   * regexed_validator: [Link](https://pub.dev/packages/regexed_validator)
   * animations: [Link](https://pub.dev/packages/animations)
