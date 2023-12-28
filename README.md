@@ -1,7 +1,7 @@
-# About Ecommerce_App_UI_Flutter
+## About Ecommerce_App_UI_Flutter
 This is a UI template for an E-Commerce app, built with Flutter. It includes several screens that are typically found in E-Commerce apps, such as a home screen with categories, a product detail screen, a cart screen, and a checkout screen. We also have some others screen such as onboarding Screen, login, sign up Screen, favorite Screen and message Screen.
 
-## Packages I'm using:
+## Packages I have used:
   * flutter_svg: [Link](https://pub.dev/packages/flutter_svg)
   * provider: [Link](https://pub.dev/packages/provider)
   * getX: [Link](https://pub.dev/packages/get)
